@@ -1,0 +1,46 @@
+.container-perso{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1vw;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .container-perso{
+      grid-template-columns: repeat(2, 1fr)
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .container-perso{
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .item{
+    border-radius: 1.3vw;
+    margin: 0;
+    padding: 0;
+    overflow : hidden;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+        transform: scale(1.02);
+    }
+  }
+  
+  .item_1per2{
+    grid-area: span 2 / span 1;
+    /*<row-start> / <column-start> / <row-end> / <column-end>*/
+  }
+  
+  img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    display: block;
+    aspect-ratio: 2/1;
+  }
