@@ -1,31 +1,21 @@
 <button class="btn btn-secondary position-absolute top-0 start-0 m-4" routerLink="">Back</button>
 <img class="head-pict d-block w-100" src="../../assets/img/generic_v4.jpg" alt="">
-<div class="container my-5">
-    <h2 class="h1 mb-5">The Longines Master Collection</h2>
-    <div class="d-flex justify-content-around align-items-center flex-wrap">
-        <div class="d-grid">
-            <p class="fw-bold">Marque montre</p><p>MONTBLANC</p>
-            <p class="fw-bold">Modèle</p><p>Timewalker</p>
-            <p class="fw-bold">Ecrin</p><p>D’origine</p>
-            <p class="fw-bold">Documents</p><p>Mode d'emploi</p>
-            <p class="fw-bold">Boitier</p><p>Acier</p>
-            <p class="fw-bold">Dimensions du boîtier</p><p>42 mm</p>
-            <p class="fw-bold">Mouvement</p><p>Automatique</p>
-            <p class="fw-bold">Glace</p><p>Saphir</p>
-            <p class="fw-bold">Cadran (couleur dominante)</p><p>Noir</p>
-            <p class="fw-bold">Bracelet</p><p>Cuir d'origine</p>
-            <p class="fw-bold">Boucle</p><p>Ardillon</p>
-            <p class="fw-bold">Étanchéité</p><p>non</p>
-            <p class="fw-bold">Réf. fabricant</p><p>115079</p>
-            <p class="fw-bold">Garantie</p><p>Cresus 2 ans</p>
-        </div>
-        <img class="" src="https://www.cresus.fr/api/image//m/o/montblanc-timewalker-manufacture-chronograph-montre-automatique-acier-54804.jpg?output=png&type=image&action=resize&height=420" alt="">
+<div class="container-fluid my-5">
+<h2 class="h1 mb-5">Montres MONTBLANC</h2>
+    <div class="d-grid">
+        <ng-container *ngIf="loaded" else elseBlock>
+            <div *ngFor="let item of db.productist" class="product-bloc">
+                <img src="{{item.img}}" alt="" class="w-100">
+                <div class="p-3">
+                    <p class="">{{item.title}}</p>
+                    <p class="fw-bold fs-5">{{item.price}} €</p>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #elseBlock>
+            <div class="text-center">
+                <i class="rotate fa-solid fa-spinner"></i> Loading...
+            </div>
+        </ng-template>
     </div>
-    {{db}}
-    <ng-container *ngIf="loaded" else elseBlock>
-        <div *ngFor="let item of db.productist">
-            {{item.tilte}}
-        </div>
-    </ng-container>
-    <ng-template #elseBlock>Loading...</ng-template>
 </div>
