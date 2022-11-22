@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ProductListRoutingModule } from './product-list-routing.module';
 import { ProductListComponent } from './product-list.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ProductListService } from './product-list.service';
 
 
@@ -13,8 +12,7 @@ import { ProductListService } from './product-list.service';
   ],
   imports: [
     CommonModule,
-    ProductListRoutingModule,
-    HttpClientModule
+    ProductListRoutingModule
   ],
   providers: [
     ProductListService
