@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule
