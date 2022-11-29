@@ -22,15 +22,33 @@
     }
 }
 
-.rotate {
-    animation: rotation 8s infinite ease-in-out;
-  }
-  
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
+@keyframes loading {
     to {
-      transform: rotate(359deg);
+      background-position-x: -20%;
     }
-  }
+}
+
+.loading-bg{
+    background: #f6f6f6;
+    background: linear-gradient(100deg,rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) #f6f6f6;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite;
+}
+
+.loading-img-1-1{
+    width: 100%;
+    aspect-ratio: 1;
+
+}
+
+.loading-line{
+    height: 18px;
+    border-radius: 4px;
+}
+
+.loading-line-small{
+    height: 18px;
+    border-radius: 4px;
+    width: 100px;
+}

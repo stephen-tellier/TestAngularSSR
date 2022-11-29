@@ -3,8 +3,8 @@
 <div class="container-fluid my-5">
 <h2 class="h1 mb-5">Montres MONTBLANC</h2>
     <div class="d-grid">
-        <ng-container *ngIf="loaded" else elseBlock>
-            <div *ngFor="let item of db.productist" class="product-bloc">
+        <ng-container *ngIf="loaded else elseBlock ">
+            <div *ngFor="let item of db" class="product-bloc">
                 <img src="{{item.img}}" alt="" class="w-100">
                 <div class="p-3">
                     <p class="">{{item.title}}</p>
@@ -13,8 +13,12 @@
             </div>
         </ng-container>
         <ng-template #elseBlock>
-            <div class="text-center">
-                <i class="rotate fa-solid fa-spinner"></i> Loading...
+            <div *ngFor="let item of [1, 2, 3, 4]">
+                <div class="loading-bg loading-img-1-1"></div>
+                <div class="p-3">
+                    <p class="loading-bg loading-line"></p>
+                    <p class="loading-bg loading-line-small"></p>
+                </div>
             </div>
         </ng-template>
     </div>

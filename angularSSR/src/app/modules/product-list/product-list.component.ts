@@ -32,7 +32,7 @@ export class ProductListComponent implements OnInit{
     this.db = this.state.get(STATE_KEY_ITEMS, <any> []);
     
     if (this.db.length === 0) {
-      this.productListService.getItems('https://my-json-server.typicode.com/stephen-tellier/TestAngularSSR/db')
+      this.productListService.getItems('https://my-json-server.typicode.com/stephen-tellier/TestAngularSSR/db?limit=4')
         .subscribe(
           db => {
             const platform = isPlatformBrowser(this.platformId) ?
