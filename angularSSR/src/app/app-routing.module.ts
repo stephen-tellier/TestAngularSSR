@@ -10,6 +10,11 @@ const routes: Routes = [
       .then(mod => mod.ProductListModule)
   },  
   {
+    path: 'client/listeproduit',
+    loadChildren: () => import('./modules/product-list/product-list.module')
+      .then(mod => mod.ProductListModule)
+  },  
+  {
     path: 'client/listeproduitclient',
     loadChildren: () => import('./modules/client/product-list-client/product-list-client.module')
       .then(mod => mod.ProductListClientModule)
