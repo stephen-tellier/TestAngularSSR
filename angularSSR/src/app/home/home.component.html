@@ -1,14 +1,14 @@
 <div class="container-perso m-4">
-    <a class="item" routerLink="/listeproduit">
+    <a class="item" href="/listeproduit?listId=1">
       <img src="../assets/img/HP3_v4_105107.jpg" alt="">
     </a>
-    <div class="item" routerLink="/listeproduit">
+    <div class="item" [routerLink]="['/listeproduit']" [queryParams]="{listId: '1'}" >
       <img src="../assets/img/HP3_v4_105421.jpg" alt="">
     </div>
-    <div class="item" routerLink="/listeproduit">
+    <div class="item" [routerLink]="['/listeproduit']" [queryParams]="{listId: '2'}">
       <img src="../assets/img/HP3_v4_105466.jpg" alt="">
     </div>
-    <div class="item item_1per2" routerLink="/listeproduit">
+    <div class="item item_1per2" [routerLink]="['/listeproduit']" [queryParams]="{listId: '1'}">
       <img src="../assets/img/products_24322148_image1_original.jpg" alt="">
     </div>
     <div class="item" routerLink="/listeproduit">
