@@ -1,0 +1,25 @@
+<button class="btn btn-secondary position-absolute top-0 start-0 m-4" routerLink="">Back</button>
+<img class="head-pict d-block w-100" src="../../assets/img/generic_v4.jpg" alt="">
+<div class="container-fluid my-5">
+<h2 class="h1 mb-5">Montres MONTBLANC</h2>
+    <div class="d-grid">
+        <ng-container *ngIf="loaded else elseBlock ">
+            <div *ngFor="let item of db" class="product-bloc">
+                <img src="{{item.img}}" alt="" class="w-100">
+                <div class="p-3">
+                    <p class="">{{item.title}}</p>
+                    <p class="fw-bold fs-5">{{item.price}} €</p>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #elseBlock>
+            <div *ngFor="let item of [1, 2, 3, 4]">
+                <div class="loading-bg loading-img-1-1"></div>
+                <div class="p-3">
+                    <p class="loading-bg loading-line"></p>
+                    <p class="loading-bg loading-line-small"></p>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
