@@ -22,7 +22,7 @@
             </div>
         </ng-template>
     </div>
-    <div class="text-center mt-3">
-        <button class="btn btn-light">Voir plus</button>
+    <div class="text-center mt-3" *ngIf="showMoreButton">
+        <button class="btn btn-light" (click)="getProductList('2','4',false)">Voir plus</button>
     </div>
 </div>
